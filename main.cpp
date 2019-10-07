@@ -1,11 +1,11 @@
 #include <iostream>
 #include <string>
 #include <vector>
-//#include "Conta.h"
+#include "Conta.h"
 #include "Cliente.h"
 //#include "Funcoes.cpp"
 //#include "Conta.cpp"
-#include "Cliente.cpp"
+//#include "Cliente.cpp"
 
 Cliente registrarClientes();
 

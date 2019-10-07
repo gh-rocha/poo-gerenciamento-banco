@@ -11,7 +11,7 @@ Conta::Conta(int conta, int data, long int cpf, float saldo)
 
 Conta::~Conta()
 {
-    delete();
+    cout << "Conta numero " << this->conta << "apagada!" << endl;
 }
 
 
@@ -43,6 +43,6 @@ int long Conta::getCpf() const{
 float Conta::getSaldo() const{
     return this->saldo;
 }
-string Conta::toString(int conta, int data, long int cpf, float saldo){
+//std::string Conta::toString(int conta, int data, long int cpf, float saldo){
     // return this->saldo;
-}
+//}

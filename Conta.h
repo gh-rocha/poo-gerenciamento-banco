@@ -16,7 +16,7 @@ class Conta
         int getData() const;
         int long getCpf() const;
         float getSaldo() const;
-        string toString(int conta, int data, long int cpf, float saldo);
+        //string toString(int conta, int data, long int cpf, float saldo);
 
     private:
         int conta,
