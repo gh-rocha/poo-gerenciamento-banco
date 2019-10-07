@@ -42,3 +42,21 @@ int getQuantidadeDeConta(){
 float getMontanteTotal(){
 
 }
+
+void registrarConta(){
+    int quantConta;
+            cout << "Digite a quantidade de conta que vai adicionar" << endl;
+            cin >> quantConta;
+            for (int i = 0; i < quantConta; i++){
+                cout << "Digite o nome do proprietario" << endl;
+                cin >> nome;
+                cout << "Digite o endereco do proprietario" << endl;
+                cin >> endereco;
+                cout << "Digite o cpf do proprietario" << endl;
+                cin >> cpf;
+                cout << "Digite o telefone do proprietario" << endl;
+                cin >> telefone;
+                cout << "Digite o email do proprietario" << endl;
+                cin >> email;
+            }
+}

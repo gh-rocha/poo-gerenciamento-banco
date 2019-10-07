@@ -4,46 +4,45 @@
 #include <unistd.h> //unslep
 #include CONTA_H
 #include CLIENTE_H
+#include "Funcoes.cpp"
 #include "Conta.cpp"
 #include "Cliente.cpp"
-#include "Funcoes.cpp"
 
 using namespace std;
 
 int main(){
     int opcao;
-    int c;
-    
-    cout << "Bem vindo ao Banco POO"<< "\n" <<"Digite 1 para adicionar clientes"<< endl;
-    switch (opcao)
-    {
-    case 0:
-        cout << "Saindo do banco..." << endl;
-        usleep(3000000); //Espera 3 segundo e sai
-        return EXIT_SUCCESS;
-    case 1:
-        registrarClientes();
-    case 2:
-        //registrarContas();
-        //
-        //
-        // int quantConta;
-        // cout << "Digite a quantidade de conta que vai adicionar" << endl;
-        // cin >> quantConta;
-        // for (int i = 0; i < quantConta; i++){
-        //     cout << "Digite o nome do proprietario" << endl;
-        //     cin >> nome;
-        //     cout << "Digite o endereco do proprietario" << endl;
-        //     cin >> endereco;
-        //     cout << "Digite o cpf do proprietario" << endl;
-        //     cin >> cpf;
-        //     cout << "Digite o telefone do proprietario" << endl;
-        //     cin >> telefone;
-        //     cout << "Digite o email do proprietario" << endl;
-        //     cin >> email;
-        // }
-    default:
-        break;
+
+    cout << "Bem vindo ao Banco POO"<< "\n" <<"Escolha a opcao desejada:\n"<< endl;
+    cout << "1 - Registrar cliente" << endl;
+    cout << "2 - Alterar cliente" << endl;
+    cout << "3 - Excluir cliente" << endl;
+    cout << "4 - Registrar conta" << endl;    
+    cout << "5- Alterar conta" << endl;
+    cout << "6- Excluir conta" << endl;
+    cout << "0- Sair" << endl;
+
+    cin >> opcao;
+
+    switch (opcao){
+        case 0:
+            cout << "Saindo do banco..." << endl;
+            usleep(3000000); //Espera 3 segundo e sai
+            return EXIT_SUCCESS;
+        case 1:
+            registrarClientes();
+        case 2:
+            //alterarClientes();
+        case 3:
+            //excluirContas();
+        case 4:
+            //registrarContas();
+        case 5:
+            //alterarContas();
+        case 6:
+            //excluirContas();
+        default:
+            return EXIT_FAILURE;
     }
     
     return 0;
