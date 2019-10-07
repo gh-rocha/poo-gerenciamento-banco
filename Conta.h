@@ -1,34 +1,28 @@
 #ifndef Conta_H
 #define Conta_H
-#include <String>
-#include <string.h>
-#include<string>
+#include <string>
 #include<iostream>
 
 class Conta
 {
     public:
-        Conta(int NumeroConta, int Data, int cpf, float saldo);
+        Conta(int conta, int data, long int cpf, float saldo=0);
         virtual ~Conta();
-        void setNumeroConta(int NumeroConta);
-        void setData(int Data);
-        void setcpf(int cpf);
-        void setSaldo(float saldo);
-        int getNumeroConta() const;
+        void setConta(int );
+        void setData(int );
+        void setCpf(long int );
+        void setSaldo(float );
+        int getConta() const;
         int getData() const;
+        int long getCpf() const;
         float getSaldo() const;
-        int getcpf() const;
-        string toString(int);
-        string toString(int);
-        string toString(int);
-        string toString(float);
-
-
-    protected:
+        string toString(int conta, int data, long int cpf, float saldo);
 
     private:
+        int conta,
+            data; 
         float saldo;
-        int NumeroConta, Data, cpf;
+        long int cpf;
 
 };
 

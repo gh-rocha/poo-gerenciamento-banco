@@ -1,10 +1,10 @@
 #include "Conta.h"
 using namespace std;
 
-Conta::Conta(int NumeroConta, int Data, int cpf, float saldo)
+Conta::Conta(int conta, int data, long int cpf, float saldo)
 {
-                    this->NumeroConta = NumeroConta;
-					this->Data = Data;
+                    this->conta = conta;
+					this->data = data;
 					this->saldo = saldo;
 					this->cpf = cpf;
 }
@@ -15,31 +15,34 @@ Conta::~Conta()
 }
 
 
-
-void Conta::setNumeroConta(int NumeroConta){
-    this->NumeroConta = NumeroConta;
-void Conta::setData(int Data){
-    this->Data = Data;
+//setters
+void Conta::setConta(int NumeroConta){
+    this->conta = NumeroConta;
 }
-void Conta::setcpf(string cpf){
+void Conta::setData(int Data){
+    this->data = Data;
+}
+void Conta::setCpf(long int cpf){
     this->cpf = cpf;
 }
 void Conta::setSaldo(float saldo){
     this->saldo = saldo;
 }
-string Conta::getNumeroConta()const{
-    return this->NumeroConta;
+
+//getters
+int Conta::getConta()const{
+    return this->conta;
 }
-string Conta::getData() const{
-    return this->Data;
+int Conta::getData() const{
+    return this->data;
 }
 
-int Conta::getcpf() const{
+int long Conta::getCpf() const{
     return this->cpf;
 }
-string Conta::getSaldo() const{
+float Conta::getSaldo() const{
     return this->saldo;
 }
-string Conta::toString(int NumeroConta, int Data, int cpf, float saldo){
-    return this->saldo;
+string Conta::toString(int conta, int data, long int cpf, float saldo){
+    // return this->saldo;
 }

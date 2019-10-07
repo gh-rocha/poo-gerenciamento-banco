@@ -10,19 +10,17 @@ class Cliente
     public:
         Cliente(string nome,string endereco,string telefone,string email,int cpf);
         virtual ~Cliente();
-        void setnome(string nome);
-        void setendereco(string endereço);
-        void settelefone(string telefone);
-        void setemail(string email);
-        void setcpf(int cpf);
-        string getnome() const;
-        string getendereco() const;
-        string gettelefone() const;
-        string getemail() const;
-        int getcpf() const;
+        void setNome(string nome);
+        void setEndereco(string endereço);
+        void setTelefone(string telefone);
+        void setEmail(string email);
+        void setCpf(int cpf);
+        string getNome() const;
+        string getEndereco() const;
+        string getTelefone() const;
+        string getEmail() const;
+        int getCpf() const;
         string toString(int);
-
-    protected:
 
     private:
         string nome, endereco, telefone, email;
