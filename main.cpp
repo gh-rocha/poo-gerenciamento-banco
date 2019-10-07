@@ -1,9 +1,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <unistd.h> //unslep
-#include CONTA_H
-#include CLIENTE_H
 #include "Funcoes.cpp"
 #include "Conta.cpp"
 #include "Cliente.cpp"
@@ -27,7 +24,6 @@ int main(){
     switch (opcao){
         case 0:
             cout << "Saindo do banco..." << endl;
-            usleep(3000000); //Espera 3 segundo e sai
             return EXIT_SUCCESS;
         case 1:
             registrarClientes();

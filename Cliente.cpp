@@ -12,7 +12,8 @@ Cliente::Cliente(string nome, string endereco, long int telefone, string email, 
 
 Cliente::~Cliente()
 {
-    delete();
+    cout << "Conta de " << this->nome << "apagada!" << endl;
+    //delete();
 }
 
 
@@ -69,6 +70,6 @@ string Cliente::toString(string nome, string endereco, long int telefone, string
     return resposta;
 }
 
-int main(){
-    Cliente A("lucca", "r. xpto", 987654321, "corninho_das_montanhas@gmail.com", 70703535);
-}
+//int main(){
+    //Cliente A("lucca", "r. xpto", 987654321, "corninho_das_montanhas@gmail.com", 70703535);
+//}
