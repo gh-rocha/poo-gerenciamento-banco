@@ -1,12 +1,13 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <unistd.h> //unslep
-#include CONTA_H
-#include CLIENTE_H
-#include "Funcoes.cpp"
-#include "Conta.cpp"
-#include "Cliente.cpp"
+//#include "Conta.h"
+//#include "Cliente.h"
+//#include "Funcoes.cpp"
+//#include "Conta.cpp"
+//#include "Cliente.cpp"
+
+void registrarClientes();
 
 using namespace std;
 
@@ -22,28 +23,32 @@ int main(){
     cout << "6- Excluir conta" << endl;
     cout << "0- Sair" << endl;
 
-    cin >> opcao;
-
-    switch (opcao){
-        case 0:
-            cout << "Saindo do banco..." << endl;
-            usleep(3000000); //Espera 3 segundo e sai
-            return EXIT_SUCCESS;
-        case 1:
-            registrarClientes();
-        case 2:
-            //alterarClientes();
-        case 3:
-            //excluirContas();
-        case 4:
-            //registrarContas();
-        case 5:
-            //alterarContas();
-        case 6:
-            //excluirContas();
-        default:
-            return EXIT_FAILURE;
+    while(cin >> opcao){
+        switch (opcao){
+            case 0:
+                cout << "Saindo do banco..." << endl;
+                return EXIT_SUCCESS;    
+            case 1:
+                cout << "registrado" << endl;
+                //registrarClientes();
+            case 2:
+                //alterarClientes();
+            case 3:
+                //excluirContas();
+            case 4:
+                //registrarContas();
+            case 5:
+                //alterarContas();
+            case 6:
+                //excluirContas();
+                cout << "excluido" << endl;
+            default:
+                return EXIT_FAILURE;
+        }
     }
+
+
+    
     
     return 0;
 }
