@@ -1,10 +1,11 @@
 #include <iostream>
 #include <string>
-#include "conta.h"
-#include "cliente.h"
-#include "conta.cpp"
-#include "cliente.cpp"
-#include "vector"
+#include <vector>
+#include CONTA_H
+#include CLIENTE_H
+#include "Conta.cpp"
+#include "Cliente.cpp"
+
 using namespace std;
 
  void registrarClientes(){

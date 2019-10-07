@@ -1,7 +1,7 @@
-#ifndef Conta_H
-#define Conta_H
-#include <string>
+#ifndef CONTA_H
+#define CONTA_H
 #include<iostream>
+#include <string>
 
 class Conta
 {
