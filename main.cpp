@@ -3,9 +3,13 @@
 #include <vector>
 #include "Conta.h"
 #include "Cliente.h"
+<<<<<<< HEAD
 //#include "Funcoes.cpp"
 //#include "Conta.cpp"
 //#include "Cliente.cpp"
+=======
+#include "Funcoes.h"
+>>>>>>> c123af35c71b125bdc486d26290bdbc9d6818e8c
 
 Cliente registrarClientes();
 
@@ -26,8 +30,7 @@ int main(){
 
     cin >> opcao; //Lê a primeira vez, depois entra no loop de leitura
 
-    vector<Cliente*> *cliente;  //Vetor de classe
-    Cliente *clientes_cadastrados;    //Instanciação do vetor para os clientes cadastrados
+    vector<Cliente> lista_clientes;
 
     do{
         switch (opcao){
@@ -36,7 +39,7 @@ int main(){
                 return EXIT_SUCCESS;    
             case 1:
                 cout << "registrado" << endl;
-                clientes_cadastrados[posicao] = registrarClientes();
+                lista_clientes.push_back(registrarClientes());
                 break;
             case 2:
                 cout << "alterados" << endl;

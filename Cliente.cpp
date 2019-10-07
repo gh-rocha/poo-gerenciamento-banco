@@ -3,21 +3,14 @@
 #include "Cliente.h"
 using namespace std;
 
-/*
-Cliente::Cliente(){
-    this->nome = "nome";
-	this->endereco = "endereco";
-	this->telefone = 999999;
-	this->email = "email";
-	this->cpf = 7070;
-}*/
+Cliente::Cliente(){}
 
-Cliente::Cliente(string nome, string email, string endereco, long int cpf, long int telefone) {
-    this->nome = nome;
-	this->endereco = endereco;
-	this->telefone = telefone;
-	this->email = email;
-	this->cpf = cpf;
+Cliente::Cliente(string nome, string email, string endereco, long int cpf, long int telefone):nome(nome), email(email), endereco(endereco), cpf(cpf), telefone(telefone){
+    // this->nome = nome;
+	// this->endereco = endereco;
+	// this->telefone = telefone;
+	// this->email = email;
+	// this->cpf = cpf;
 }
 
 Cliente::~Cliente() {
