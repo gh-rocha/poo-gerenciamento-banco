@@ -5,17 +5,9 @@ using namespace std;
 
 Cliente::Cliente(){}
 
-Cliente::Cliente(string nome, string email, string endereco, long int cpf, long int telefone):nome(nome), email(email), endereco(endereco), cpf(cpf), telefone(telefone){
-    // this->nome = nome;
-	// this->endereco = endereco;
-	// this->telefone = telefone;
-	// this->email = email;
-	// this->cpf = cpf;
-}
+Cliente::Cliente(string nome, string email, string endereco, long int cpf, long int telefone):nome(nome), email(email), endereco(endereco), cpf(cpf), telefone(telefone){}
 
-Cliente::~Cliente() {
-    cout << "Conta de " << this->nome << "apagada!" << endl;
-}
+Cliente::~Cliente() {}
 
 
 //setters
