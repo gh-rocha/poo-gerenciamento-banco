@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+<<<<<<< HEAD
 //#include "Conta.h"
 //#include "Cliente.h"
 //#include "Funcoes.cpp"
@@ -8,6 +9,11 @@
 //#include "Cliente.cpp"
 
 void registrarClientes();
+=======
+#include "Funcoes.cpp"
+#include "Conta.cpp"
+#include "Cliente.cpp"
+>>>>>>> b0a64f7849d12042e32aa3d7e4d541d41f0da15c
 
 using namespace std;
 

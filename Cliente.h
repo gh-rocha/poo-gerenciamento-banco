@@ -7,7 +7,7 @@ class Cliente
 {
     public:
         Cliente(string nome,string endereco,long int telefone,string email,long int cpf);
-        virtual ~Cliente();
+        ~Cliente();
         void setNome(string );
         void setEndereco(string );
         void setTelefone(long int );
