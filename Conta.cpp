@@ -1,4 +1,4 @@
-#include "Conta.h"
+#include Conta_H
 using namespace std;
 
 Conta::Conta(int conta, int data, long int cpf, float saldo)

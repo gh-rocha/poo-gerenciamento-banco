@@ -1,5 +1,5 @@
-#ifndef Conta_H
-#define Conta_H
+#ifndef CONTA_H
+#define CONTA_H
 #include <string>
 #include<iostream>
 
@@ -26,4 +26,4 @@ class Conta
 
 };
 
-#endif // Conta_H
+#endif // CONTA_h

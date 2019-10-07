@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "conta.h"
+#include CONTA_H
 #include "cliente.h"
 #include "conta.cpp"
 #include "cliente.cpp"
