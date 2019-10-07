@@ -6,23 +6,26 @@
 class Cliente
 {
     public:
-        Cliente(string nome,string endereco,string telefone,string email,int cpf);
+        Cliente(string nome,string endereco,long int telefone,string email,long int cpf);
         virtual ~Cliente();
-        void setNome(string nome);
-        void setEndereco(string endereço);
-        void setTelefone(string telefone);
-        void setEmail(string email);
-        void setCpf(int cpf);
+        void setNome(string );
+        void setEndereco(string );
+        void setTelefone(long int );
+        void setEmail(string );
+        void setCpf(long int );
         string getNome() const;
         string getEndereco() const;
-        string getTelefone() const;
+        long int getTelefone() const;
         string getEmail() const;
-        int getCpf() const;
-        string toString(int);
+        long int getCpf() const;
+        string toString(string, string, long int, string, long int );
 
     private:
-        string nome, endereco, telefone, email;
-        int cpf;
+        string nome,
+               endereco,
+               email;
+        long int cpf,
+                 telefone;
 
 };
 #endif // CLIENTE_H

@@ -1,7 +1,7 @@
 #include "Cliente.h"
 using namespace std;
 
-Cliente::Cliente(string nome, string endereco, string telefone, string email, int cpf)
+Cliente::Cliente(string nome, string endereco, long int telefone, string email, long int cpf)
 {
                     this->nome = nome;
 					this->endereco = endereco;
@@ -16,37 +16,59 @@ Cliente::~Cliente()
 }
 
 
-
-void Cliente::setnome(string nome){
+//setters
+void Cliente::setNome(string nome){
     this->nome = nome;
 }
-void Cliente::setendereco(string endereco){
+void Cliente::setEndereco(string endereco){
     this->endereco = endereco;
 }
-void Cliente::settelefone(string telefone){
+void Cliente::setTelefone(long int telefone){
     this->telefone = telefone;
 }
-void Cliente::setemail(string email){
+void Cliente::setEmail(string email){
     this->email = email;
 }
-void Cliente::setcpf(int cpf){
+void Cliente::setCpf(long int cpf){
     this->cpf = cpf;
 }
-string Cliente::getnome()const{
+
+//getters
+string Cliente::getNome()const{
     return this->nome;
 }
-string Cliente::getendereco() const{
+string Cliente::getEndereco() const{
     return this->endereco;
 }
-string Cliente::gettelefone() const{
+long int Cliente::getTelefone() const{
     return this->telefone;
 }
-string Cliente::getemail() const{
+string Cliente::getEmail() const{
     return this->email;
 }
-int Cliente::getcpf() const{
+long int Cliente::getCpf() const{
     return this->cpf;
 }
-string Cliente::toString(int cpf){
-    return this->cpf;
+
+//to_string
+string Cliente::toString(string nome, string endereco, long int telefone, string email, long int cpf){
+    string resposta ("Nome: ");
+    resposta += nome;
+    resposta += "; Endereco: ";
+    resposta += endereco;
+    resposta += "; Tel: ";
+    resposta += to_string(telefone);  
+    resposta += "; Email: ";
+    resposta += email;
+    resposta += "; CPF: ";
+    resposta += to_string(cpf);
+    resposta += "\0";
+    
+    cout << resposta << endl;
+
+    return resposta;
+}
+
+int main(){
+    Cliente A("lucca", "r. xpto", 987654321, "corninho_das_montanhas@gmail.com", 70703535);
 }
