@@ -5,16 +5,17 @@ Cliente registrarClientes() {
   std::string nome, endereco, email;
   long int cpf, telefone;
 
-  cout << "Digite o nome do proprietario: >";
+  cout << "Digite o nome do proprietario >";
   cin >> nome;
-  cout << "\nDigite o endereco do proprietario" << endl;
+  cout << "\nDigite o endereco do proprietario >";
   cin >> endereco;
-  cout << "\nDigite o cpf do proprietario" << endl;
+  cout << "\nDigite o cpf do proprietario >";
   cin >> cpf;
-  cout << "\nDigite o telefone do proprietario" << endl;
+  cout << "\nDigite o telefone do proprietario >";
   cin >> telefone;
-  cout << "\nDigite o email do proprietario" << endl;
+  cout << "\nDigite o email do proprietario >";
   cin >> email;
+  cout << endl;
 
   // while (int a = 0 < c) {
   //   while (cpf == cl[a].getcpf()) {
@@ -31,7 +32,7 @@ Cliente registrarClientes() {
 }
 int busca_cliente(string nome, vector<Cliente> &lista_clientes){
   int cont = 0;
-  for(cont;lista_clientes.size();cont++){
+  for(cont;cont<lista_clientes.size();cont++){
     if(!nome.compare(lista_clientes[cont].getNome())) //Se o nome digitado for igual a algum da lista
       return cont;
     else return -1;
@@ -42,7 +43,7 @@ int busca_cliente(string nome, vector<Cliente> &lista_clientes){
 
 void imprime_lista_clientes(vector<Cliente> &lista_clientes){
   int cont = 0;
-  for(cont;lista_clientes.size();cont++){
+  for(cont;cont<lista_clientes.size();cont++){
     cout << "Cliente " << cont + 1  << ":" << lista_clientes[cont].getNome() << endl;
   }
 }
@@ -52,7 +53,7 @@ void alterar_cliente(vector<Cliente> &lista_clientes){
 
   cout << "Digite o nome do cliente que quer alterar:" << endl;
   imprime_lista_clientes(lista_clientes);
-  cout << "Nome: > " << endl;
+  cout << "Nome > " << endl;
   cin >> nome;
   busca_cliente(nome,lista_clientes);
 }
