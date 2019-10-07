@@ -1,6 +1,8 @@
+#include <string>
+
 Cliente registrarClientes() {
 
-  string nome, endereco, telefone, email;
+  std::string nome, endereco, telefone, email;
   int c;
   long int cpf;
 

@@ -1,8 +1,7 @@
 #include <iostream>
 #include <string>
-using namespace std;
-
 #include "Cliente.h"
+using namespace std;
 
 /*
 Cliente::Cliente(){
@@ -44,42 +43,42 @@ void Cliente::setCpf(long int cpf){
 }
 
 //getters
-string Cliente::getNome()const{
+std::string Cliente::getNome()const{
     return this->nome;
 }
-string Cliente::getEndereco() const{
+std::string Cliente::getEndereco() const{
     return this->endereco;
 }
 long int Cliente::getTelefone() const{
     return this->telefone;
 }
-string Cliente::getEmail() const{
+std::string Cliente::getEmail() const{
     return this->email;
 }
 long int Cliente::getCpf() const{
     return this->cpf;
 }
 
-//to_string
-string Cliente::toString(){//string nome, string endereco, long int telefone, string email, long int cpf){
-    string resposta ("Nome: ");
-    resposta += getNome();
-    resposta += "; Endereco: ";
-    resposta += getEndereco();
-    resposta += "; Tel: ";
-    resposta += to_string(getTelefone());  
-    resposta += "; Email: ";
-    resposta += getEmail();
-    resposta += "; CPF: ";
-    resposta += to_string(getCpf());
-    resposta += "\0";
+// //to_string
+// string Cliente::toString(){//string nome, string endereco, long int telefone, string email, long int cpf){
+//     string resposta ("Nome: ");
+//     resposta += getNome();
+//     resposta += "; Endereco: ";
+//     resposta += getEndereco();
+//     resposta += "; Tel: ";
+//     resposta += to_string(getTelefone());  
+//     resposta += "; Email: ";
+//     resposta += getEmail();
+//     resposta += "; CPF: ";
+//     resposta += to_string(getCpf());
+//     resposta += "\0";
     
-    cout << resposta << endl;
+//     cout << resposta << endl;
 
-    return resposta;
-}
+//     return resposta;
+// }
 
-int main(){
-    Cliente A("lucca", "r. xpto", 987654321, "corninho_das_montanhas@gmail.com", 70703535);
-    A.toString();
-}
+// int main(){
+//     Cliente A("lucca", "r. xpto", 987654321, "corninho_das_montanhas@gmail.com", 70703535);
+//     A.toString();
+// }

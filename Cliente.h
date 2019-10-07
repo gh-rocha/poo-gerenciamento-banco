@@ -1,27 +1,26 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
-
 #include<iostream>
 #include <string>
+using namespace std;
 
 class Cliente
 {
     public:
-        //Cliente();
         Cliente(string nome, string email, string endereco, long int cpf, long int telefone);
         ~Cliente();
         
         //setters
-        void setNome(string );
-        void setEmail(string );
-        void setEndereco(string );
-        void setCpf(long int );
-        void setTelefone(long int );
+        void setNome(string nome);
+        void setEmail(string email);
+        void setEndereco(string endereco);
+        void setCpf(long int cpf);
+        void setTelefone(long int telefone);
         
         //getters
-        string getNome() const;
-        string getEmail() const;
-        string getEndereco() const;
+        std::string getNome() const;
+        std::string getEmail() const;
+        std::string getEndereco() const;
         long int getCpf() const;
         long int getTelefone() const;
         
