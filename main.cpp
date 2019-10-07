@@ -3,13 +3,7 @@
 #include <vector>
 #include "Conta.h"
 #include "Cliente.h"
-<<<<<<< HEAD
-//#include "Funcoes.cpp"
-//#include "Conta.cpp"
-//#include "Cliente.cpp"
-=======
 #include "Funcoes.h"
->>>>>>> c123af35c71b125bdc486d26290bdbc9d6818e8c
 
 Cliente registrarClientes();
 

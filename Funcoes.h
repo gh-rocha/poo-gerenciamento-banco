@@ -2,8 +2,8 @@
 
 Cliente registrarClientes() {
 
-  std::string nome, endereco, telefone, email;
-  long int cpf;
+  std::string nome, endereco, email;
+  long int cpf, telefone;
 
   cout << "Digite o nome do proprietario: >";
   cin >> nome;
