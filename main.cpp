@@ -18,6 +18,7 @@ float getMontanteTotal(){
 
 }
 int main(){
+    // doocumentação
     int opcao;
     string nome, endereco, telefone, email;
     int cpf;
@@ -27,6 +28,7 @@ int main(){
     Cliente cl [quantCliente];
     
     cout << "Bem vindo ao Banco POO"<< "\n" <<"Digite 1 para adicionar clientes"<< endl;
+    // doocumentação2
     switch (opcao)
     {
     case 1:
