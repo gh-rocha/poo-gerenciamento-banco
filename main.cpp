@@ -2,17 +2,17 @@
 #include <string>
 #include <vector>
 //#include "Conta.h"
-//#include "Cliente.h"
+#include "Cliente.h"
 //#include "Funcoes.cpp"
 //#include "Conta.cpp"
 //#include "Cliente.cpp"
 
-void registrarClientes();
+Cliente registrarClientes();
 
 using namespace std;
 
 int main(){
-    int opcao, contador = 0;
+    int opcao, posicao = 0;
 
     cout << "Bem vindo ao Banco POO"<< "\n" <<"Escolha a opcao desejada:\n"<< endl;
     cout << "1 - Registrar cliente" << endl;
@@ -23,7 +23,11 @@ int main(){
     cout << "6- Excluir conta" << endl;
     cout << "0- Sair\n" << endl;
     cout << "Insira a opção desejada: >" << endl;
-    cin >> opcao;
+
+    cin >> opcao; //Lê a primeira vez, depois entra no loop de leitura
+
+    vector<Cliente*> *cliente;  //Vetor de classe
+    Cliente *clientes_cadastrados;    //Instanciação do vetor para os clientes cadastrados
 
     do{
         switch (opcao){
@@ -32,7 +36,7 @@ int main(){
                 return EXIT_SUCCESS;    
             case 1:
                 cout << "registrado" << endl;
-                //registrarClientes();
+                clientes_cadastrados[posicao] = registrarClientes();
                 break;
             case 2:
                 cout << "alterados" << endl;

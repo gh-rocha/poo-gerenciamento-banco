@@ -1,62 +1,58 @@
+Cliente registrarClientes() {
 
- void registrarClientes(){
-    
-    string nome, endereco, telefone, email;
-    int c;
-    long int cpf;
+  string nome, endereco, telefone, email;
+  int c;
+  long int cpf;
 
-    cout << "Digite a quantidade de Clientes que vai adicionar" << endl;
-    cin >> c;
+  for (int i = 0; i < c; i++) {
+    cout << "Digite o nome do proprietario: >";
+    cin >> nome;
+    cout << "\nDigite o endereco do proprietario" << endl;
+    cin >> endereco;
+    cout << "\nDigite o cpf do proprietario" << endl;
+    cin >> cpf;
+    cout << "\nDigite o telefone do proprietario" << endl;
+    cin >> telefone;
+    cout << "\nDigite o email do proprietario" << endl;
+    cin >> email;
 
-    for (int i = 0; i < c; i++){
-        cout << "Digite o nome do proprietario" << endl;
-        cin >> nome;
-        cout << "Digite o endereco do proprietario" << endl;
-        cin >> endereco;
-        cout << "Digite o cpf do proprietario" << endl;
-        cin >> cpf;           
-        cout << "Digite o telefone do proprietario" << endl;
-        cin >> telefone;
-        cout << "Digite o email do proprietario" << endl;
-        cin >> email;
-        if(i == 0){
-             cl[i](nome, endereco, telefone, email, cpf);
-        }    
-        while (int a=0 < c) {
-            while(cpf == cl[a].getcpf()){
-                cout <<"cpf repetido, digite novamente " << endl;
-                cin >> cpf;
-            } 
-            a++;   
-        }
-       }
- }
-int getQuantidadeDeClientes(int quantCliente){
-    return quantCliente;
-}
+    // while (int a = 0 < c) {
+    //   while (cpf == cl[a].getcpf()) {
+    //     cout << "cpf repetido, digite novamente " << endl;
+    //     cin >> cpf;
+    //   }
+    //   a++;
+    // }
 
-int getQuantidadeDeConta(){
+    return Cliente(nome,email,endereco,cpf,telefone);
+  }
+// }
+// int getQuantidadeDeClientes(int quantCliente) {
+//   return quantCliente;
+// }
 
-}
+// int getQuantidadeDeConta() {
 
-float getMontanteTotal(){
+// }
 
-}
+// float getMontanteTotal() {
 
-void registrarConta(){
-    int quantConta;
-            cout << "Digite a quantidade de conta que vai adicionar" << endl;
-            cin >> quantConta;
-            for (int i = 0; i < quantConta; i++){
-                cout << "Digite o nome do proprietario" << endl;
-                cin >> nome;
-                cout << "Digite o endereco do proprietario" << endl;
-                cin >> endereco;
-                cout << "Digite o cpf do proprietario" << endl;
-                cin >> cpf;
-                cout << "Digite o telefone do proprietario" << endl;
-                cin >> telefone;
-                cout << "Digite o email do proprietario" << endl;
-                cin >> email;
-            }
-}
+// }
+
+// void registrarConta() {
+//   int quantConta;
+//   cout << "Digite a quantidade de conta que vai adicionar" << endl;
+//   cin >> quantConta;
+//   for (int i = 0; i < quantConta; i++) {
+//     cout << "Digite o nome do proprietario" << endl;
+//     cin >> nome;
+//     cout << "Digite o endereco do proprietario" << endl;
+//     cin >> endereco;
+//     cout << "Digite o cpf do proprietario" << endl;
+//     cin >> cpf;
+//     cout << "Digite o telefone do proprietario" << endl;
+//     cin >> telefone;
+//     cout << "Digite o email do proprietario" << endl;
+//     cin >> email;
+//   }
+// }
