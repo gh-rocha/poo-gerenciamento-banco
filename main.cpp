@@ -6,13 +6,18 @@
 #include "Funcoes.h"
 
 Cliente registrarClientes();
+void imprime_lista_clientes(vector<Cliente>);
+void alterar_cliente(vector<Cliente> &lista_clientes);
+int busca_clientes(string, vector<Cliente>);
 
 using namespace std;
 
 int main(){
-    int opcao, posicao = 0;
+    int opcao; //Opção para seleção no menu
 
-    cout << "Bem vindo ao Banco POO"<< "\n" <<"Escolha a opcao desejada:\n"<< endl;
+    vector<Cliente> lista_clientes; //Vetor de classes "Cliente" chamado "lista_clientes"
+
+    cout << "Bem vindo ao Banco POO"<< "\n" << endl;
     cout << "1 - Registrar cliente" << endl;
     cout << "2 - Alterar cliente" << endl;
     cout << "3 - Excluir cliente" << endl;
@@ -22,22 +27,27 @@ int main(){
     cout << "0- Sair\n" << endl;
     cout << "Insira a opção desejada: >" << endl;
 
-    cin >> opcao; //Lê a primeira vez, depois entra no loop de leitura
-
-    vector<Cliente> lista_clientes;
-
+    cin >> opcao; //Lê a primeira opção, depois mantém o loop lendo as próximas
     do{
+        cout << "1 - Registrar cliente" << endl;
+        cout << "2 - Alterar cliente" << endl;
+        cout << "3 - Excluir cliente" << endl;
+        cout << "4 - Registrar conta" << endl;    
+        cout << "5- Alterar conta" << endl;
+        cout << "6- Excluir conta" << endl;
+        cout << "0- Sair\n" << endl;
+
+        cout << "Insira a opção desejada: >" << endl;
+
         switch (opcao){
             case 0:
                 cout << "Saindo do banco..." << endl;
                 return EXIT_SUCCESS;    
             case 1:
-                cout << "registrado" << endl;
                 lista_clientes.push_back(registrarClientes());
                 break;
             case 2:
-                cout << "alterados" << endl;
-                //alterarClientes();
+                alterar_cliente(lista_clientes);
                 break;
             case 3:
                 cout << "excluidas" << endl;
@@ -58,8 +68,6 @@ int main(){
             default:
                 return EXIT_FAILURE;
         }
-
-        cout << "\nInsira a opção desejada: >" << endl;
     }while(cin >> opcao);
 
 

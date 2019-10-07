@@ -24,38 +24,35 @@ Cliente registrarClientes() {
   //   a++;
   // }
 
-  Cliente *objeto;
+  Cliente * objeto;
   objeto = new Cliente(nome, email, endereco, cpf, telefone);
 
   return *objeto;
+}
+int busca_cliente(string nome, vector<Cliente> &lista_clientes){
+  int cont = 0;
+  for(cont;lista_clientes.size();cont++){
+    if(!nome.compare(lista_clientes[cont].getNome())) //Se o nome digitado for igual a algum da lista
+      return cont;
+    else return -1;
   }
-// }
-// int getQuantidadeDeClientes(int quantCliente) {
-//   return quantCliente;
-// }
 
-// int getQuantidadeDeConta() {
+  return -1;
+}
 
-// }
+void imprime_lista_clientes(vector<Cliente> &lista_clientes){
+  int cont = 0;
+  for(cont;lista_clientes.size();cont++){
+    cout << "Cliente " << cont + 1  << ":" << lista_clientes[cont].getNome() << endl;
+  }
+}
 
-// float getMontanteTotal() {
+void alterar_cliente(vector<Cliente> &lista_clientes){
+  std::string nome;
 
-// }
-
-// void registrarConta() {
-//   int quantConta;
-//   cout << "Digite a quantidade de conta que vai adicionar" << endl;
-//   cin >> quantConta;
-//   for (int i = 0; i < quantConta; i++) {
-//     cout << "Digite o nome do proprietario" << endl;
-//     cin >> nome;
-//     cout << "Digite o endereco do proprietario" << endl;
-//     cin >> endereco;
-//     cout << "Digite o cpf do proprietario" << endl;
-//     cin >> cpf;
-//     cout << "Digite o telefone do proprietario" << endl;
-//     cin >> telefone;
-//     cout << "Digite o email do proprietario" << endl;
-//     cin >> email;
-//   }
-// }
+  cout << "Digite o nome do cliente que quer alterar:" << endl;
+  imprime_lista_clientes(lista_clientes);
+  cout << "Nome: > " << endl;
+  cin >> nome;
+  busca_cliente(nome,lista_clientes);
+}
