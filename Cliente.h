@@ -1,24 +1,31 @@
 #ifndef CLIENTE_H
 #define CLIENTE_H
+
 #include<iostream>
 #include <string>
 
 class Cliente
 {
     public:
-        Cliente(string nome,string endereco,long int telefone,string email,long int cpf);
+        //Cliente();
+        Cliente(string nome, string email, string endereco, long int cpf, long int telefone);
         ~Cliente();
+        
+        //setters
         void setNome(string );
-        void setEndereco(string );
-        void setTelefone(long int );
         void setEmail(string );
+        void setEndereco(string );
         void setCpf(long int );
+        void setTelefone(long int );
+        
+        //getters
         string getNome() const;
-        string getEndereco() const;
-        long int getTelefone() const;
         string getEmail() const;
+        string getEndereco() const;
         long int getCpf() const;
-        string toString(string, string, long int, string, long int );
+        long int getTelefone() const;
+        
+        string toString();//string, string, long int, string, long int );
 
     private:
         string nome,

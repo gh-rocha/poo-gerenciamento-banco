@@ -1,19 +1,28 @@
-#include "Cliente.h"
+#include <iostream>
+#include <string>
 using namespace std;
 
-Cliente::Cliente(string nome, string endereco, long int telefone, string email, long int cpf)
-{
-                    this->nome = nome;
-					this->endereco = endereco;
-					this->telefone = telefone;
-					this->email = email;
-					this->cpf = cpf;
+#include "Cliente.h"
+
+/*
+Cliente::Cliente(){
+    this->nome = "nome";
+	this->endereco = "endereco";
+	this->telefone = 999999;
+	this->email = "email";
+	this->cpf = 7070;
+}*/
+
+Cliente::Cliente(string nome, string email, string endereco, long int cpf, long int telefone) {
+    this->nome = nome;
+	this->endereco = endereco;
+	this->telefone = telefone;
+	this->email = email;
+	this->cpf = cpf;
 }
 
-Cliente::~Cliente()
-{
+Cliente::~Cliente() {
     cout << "Conta de " << this->nome << "apagada!" << endl;
-    //delete();
 }
 
 
@@ -52,17 +61,17 @@ long int Cliente::getCpf() const{
 }
 
 //to_string
-string Cliente::toString(string nome, string endereco, long int telefone, string email, long int cpf){
+string Cliente::toString(){//string nome, string endereco, long int telefone, string email, long int cpf){
     string resposta ("Nome: ");
-    resposta += nome;
+    resposta += getNome();
     resposta += "; Endereco: ";
-    resposta += endereco;
+    resposta += getEndereco();
     resposta += "; Tel: ";
-    resposta += to_string(telefone);  
+    resposta += to_string(getTelefone());  
     resposta += "; Email: ";
-    resposta += email;
+    resposta += getEmail();
     resposta += "; CPF: ";
-    resposta += to_string(cpf);
+    resposta += to_string(getCpf());
     resposta += "\0";
     
     cout << resposta << endl;
@@ -70,6 +79,7 @@ string Cliente::toString(string nome, string endereco, long int telefone, string
     return resposta;
 }
 
-//int main(){
-    //Cliente A("lucca", "r. xpto", 987654321, "corninho_das_montanhas@gmail.com", 70703535);
-//}
+int main(){
+    Cliente A("lucca", "r. xpto", 987654321, "corninho_das_montanhas@gmail.com", 70703535);
+    A.toString();
+}
