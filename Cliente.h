@@ -25,7 +25,7 @@ class Cliente
         long int getCpf() const;
         long int getTelefone() const;
         
-        //string toString();//string, string, long int, string, long int );
+        string toString();//string, string, long int, string, long int );
 
     private:
         string nome,
